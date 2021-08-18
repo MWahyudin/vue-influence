@@ -14,22 +14,72 @@
         </div>
         <div v-else>
           <!-- form -->
-          <b-form class="mt-2">
+          <b-form
+            class="mt-2"
+            autocomplete="off"
+          >
             <b-row>
               <!-- Name -->
-              <b-col sm="8">
-                <b-form-group>
-                  <b-form-input
-                    v-model="selectedClient.nama"
-                    name="nama"
-                    placeholder="Nama"
-                  />
-                </b-form-group>
+              <b-col>
+                <b-form-input
+                  v-model="selectedClient.nama"
+                  name="nama"
+                  placeholder="Nama"
+                />
               </b-col>
               <!-- /Name -->
-              <!-- Select -->
-              <!-- /end select -->
 
+              <!-- No Contact -->
+              <b-col>
+                <b-form-input
+                  v-model="selectedClient.no_contact"
+                  name="no_contact"
+                  placeholder="No Kontak"
+                />
+              </b-col>
+              <!-- /No Contact -->
+            </b-row>
+
+            <b-row class="mb-2 mt-2">
+
+              <b-col>
+
+                <!-- website -->
+                <b-form-input
+                  v-model="selectedClient.website"
+                  name="website"
+                  placeholder="Website"
+                />
+              <!-- /website -->
+              </b-col>
+
+              <!-- /tiktok -->
+            </b-row>
+
+            <b-row class="mb-2">
+              <!-- Alamat -->
+              <b-col>
+                <b-form-input
+                  v-model="selectedClient.address"
+                  name="alamat"
+                  placeholder="alamat"
+                />
+              </b-col>
+              <!-- /Alamat -->
+            </b-row>
+            <b-row>
+              <b-col>  <b-form-input
+                v-model="selectedClient.instagram"
+                name="instagram"
+                placeholder="Instagram"
+              /></b-col>
+              <b-col>
+                <b-form-input
+                  v-model="selectedClient.tiktok"
+                  name="tiktok"
+                  placeholder="Tiktok"
+                />
+              </b-col>
             </b-row>
 
           </b-form>
@@ -278,7 +328,7 @@ import {
 import { mapActions, mapState } from 'vuex'
 
 export default {
-  name: 'tableClient',
+  name: 'TableClient',
   components: {
     MyModal,
     Loading,

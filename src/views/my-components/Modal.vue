@@ -162,9 +162,21 @@ export default {
 
       if (this.modalAction === 'add') {
         delete data.id
-        this.addKategori(data).then(() => {
+        this.addClient(this.data).then(() => {
           this.isLoading = false
+          this.$emit('modalClose')
           this.$refs['show-modal'].hide()
+
+          this.$toast({
+            component: ToastificationContent,
+            position: 'top-right',
+            props: {
+              title: 'Berhasil',
+              icon: 'CoffeeIcon',
+              variant: 'success',
+              text: 'Data client berhasil ditambahkan !',
+            },
+          })
         }).catch(() => {
           this.isLoading = false
           this.$toast({
@@ -179,9 +191,20 @@ export default {
           })
         })
       } else if (this.modalAction === 'edit') {
-        this.updateKategori(data).then(() => {
+        this.updateClient(this.data).then(() => {
           this.isLoading = false
+          this.$emit('modalClose')
           this.$refs['show-modal'].hide()
+          this.$toast({
+            component: ToastificationContent,
+            position: 'top-right',
+            props: {
+              title: 'Berhasil',
+              icon: 'CoffeeIcon',
+              variant: 'success',
+              text: 'Data client berhasil diupdate !',
+            },
+          })
         }).catch(() => {
           this.isLoading = false
           this.$toast({
@@ -191,7 +214,7 @@ export default {
               title: 'Gagal',
               icon: 'CoffeeIcon',
               variant: 'danger',
-              text: 'Data kategori gagal dihapus !',
+              text: 'Data client gagal dihapus !',
             },
           })
         })

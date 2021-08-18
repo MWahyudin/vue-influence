@@ -5,8 +5,8 @@ const mutations = {
   updateClient(state, payload) {
     const index = state.list.findIndex(p => p.id === payload.id)
     Object.assign(state.list[index], {
-      id: payload.id,
-      name: payload.name,
+      // id: payload.id,
+      name: payload.nama,
     })
   },
   deleteClient(state, payload) {

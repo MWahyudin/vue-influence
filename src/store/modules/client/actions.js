@@ -1,6 +1,6 @@
 import axios from '@axios'
 
-const qs = require('querystring')
+// const qs = require('querystring')
 
 const actions = {
   getClient({ commit }) {
@@ -22,7 +22,8 @@ const actions = {
       axios
         .put(
           `/master/client/${payload.id}`,
-          qs.stringify(payload),
+          // qs.stringify(payload),
+          payload,
         )
         .then(() => {
           commit('updateClient', payload)
