@@ -22,6 +22,28 @@ export default [
     route: 'apps-client',
     icon: 'UserCheckIcon',
   },
+  {
+    title: 'Transaksi',
+    icon: 'ShoppingBagIcon',
+    children: [
+      {
+        title: 'Transaksi baru',
+        route: { name: 'transaksi-baru' },
+      },
+      {
+        title: 'Preview',
+        route: { name: 'apps-invoice-preview', params: { id: 4987 } },
+      },
+      {
+        title: 'Edit',
+        route: { name: 'apps-invoice-edit', params: { id: 4987 } },
+      },
+      {
+        title: 'Add',
+        route: { name: 'apps-invoice-add' },
+      },
+    ],
+  },
   // {
   //   title: 'Email',
   //   route: 'apps-email',

@@ -14,6 +14,18 @@ const actions = {
         })
     })
   },
+  getInfluence({ commit }) {
+    return new Promise((resolve, reject) => {
+      axios.get('/influence')
+        .then(res => {
+          commit('setInfluence', res.data.data)
+          resolve(res.data.data)
+        })
+        .catch(error => {
+          reject(error)
+        })
+    })
+  },
 
   getClient({ commit }) {
     return new Promise((resolve, reject) => {

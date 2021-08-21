@@ -12,6 +12,7 @@ import {
   alpha_dash as rule_alpha_dash,
   alpha_num as rule_alpha_num,
   length as rule_length,
+  numeric as rule_numeric,
 } from 'vee-validate/dist/rules'
 import ar from 'vee-validate/dist/locale/ar.json'
 import en from 'vee-validate/dist/locale/en.json'
@@ -46,6 +47,8 @@ export const alphaDash = extend('alpha-dash', rule_alpha_dash)
 export const alphaNum = extend('alpha-num', rule_alpha_num)
 
 export const length = extend('length', rule_length)
+
+export const numeric = extend('numeric', rule_numeric)
 
 export const positive = extend('positive', {
   validate: validatorPositive,

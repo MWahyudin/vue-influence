@@ -11,6 +11,7 @@ import moduleRegency from './modules/regency'
 import moduleService from './modules/service'
 import moduleCategory from './modules/kategori'
 import moduleClient from './modules/client'
+import moduleInfluence from './modules/influence'
 
 Vue.use(Vuex)
 
@@ -24,6 +25,7 @@ export default new Vuex.Store({
     // 'app-influence': moduleInfluence,
     'app-regency': moduleRegency,
     'app-client': moduleClient,
+    'app-influence': moduleInfluence,
     'app-service': moduleService,
     'app-category': moduleCategory,
   },

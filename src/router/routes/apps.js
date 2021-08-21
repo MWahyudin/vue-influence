@@ -58,6 +58,18 @@ export default [
       // contentClass: 'email-application',
     },
   },
+  // *===============================================---*
+  // *--------- Point of Sales-------------------------------*
+  // *===============================================---*
+  {
+    path: '/apps/transaksi/baru',
+    name: 'transaksi-baru',
+    component: () => import('@/views/apps/pos/transaksi-baru/Master.vue'),
+    meta: {
+      // contentRenderer: 'sidebar-left',
+      // contentClass: 'email-application',
+    },
+  },
   {
     path: '/apps/calendar',
     name: 'apps-calendar',

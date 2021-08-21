@@ -2,6 +2,9 @@ const mutations = {
   setInfluenceData(state, payload) {
     state.influence = payload
   },
+  setInfluence(state, payload) {
+    state.influence_all = payload
+  },
 
   setService(state, payload) {
     state.service = payload
